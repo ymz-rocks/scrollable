@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>scrollable v1.0</title>
+    <link href="css/demo.css" rel="stylesheet" />
+    <script src="lib/jquery-1.11.0.min.js"></script>
+    <script src="lib/dragga.1.0.js"></script>
+    <script src="lib/scrollable.v1.0..js"></script>
+    <script>
+        $(function ()
+        {
+            scrollable('.frame',
+            {
+                // when mode is undefined  -> track both gesture and scroller events
+                // when mode is 'gesture'  -> track gesture events only
+                // when mode is 'scroller' -> track scroller events only
+
+                //mode: 'scroller',
+
+                start: function (e, src)
+                {
+                    console.log('start ' + src);
+                },
+
+                drag: function (e, src)
+                {
+                    console.log('drag ' + src);
+                },
+
+                end: function (e, src)
+                {
+                    console.log('end ' + src);
+                    console.log('duration: ' + e.time.duration + 'ms');
+                    console.log('==================');
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div class="frame x">
+        <div class="axis x">
+            <img src="img/1.png" alt="1" />
+            <img src="img/2.png" alt="2" />
+            <img src="img/3.png" alt="3" />
+            <img src="img/4.png" alt="4" />
+            <img src="img/5.png" alt="5" />
+        </div>
+        <div class="scroller x"></div>
+        <div></div>
+    </div>
+    <br />
+    <div class="frame y">
+        <div class="axis y">
+            <img src="img/1.png" alt="1" />
+            <img src="img/2.png" alt="2" />
+            <img src="img/3.png" alt="3" />
+            <img src="img/4.png" alt="4" />
+            <img src="img/5.png" alt="5" />
+        </div>
+        <div class="scroller y"></div>
+        <div></div>
+    </div>
+    <img src="img/scrollable.logo.png" alt="logo" />
+</body>
+</html>

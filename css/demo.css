@@ -1,0 +1,83 @@
+﻿body
+{
+    background: #c9d1d8;
+}
+
+img[alt="logo"]
+{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+}
+
+div.frame
+{
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    background: #3b6080;
+}
+
+    div.frame > .axis
+    {
+        position: relative;
+    }
+
+    div.frame > .scroller
+    {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: #ee4821; /* #fa081d; */
+    }
+
+        div.frame > .scroller.x
+        {
+            height: 20px;
+            bottom: 0;
+        }
+
+        div.frame > .scroller.y
+        {
+            width: 20px;
+            top: 0;
+        }
+
+
+
+    div.frame.x
+    {
+        width: 500px;
+    }
+
+    div.frame > .axis.x
+    {
+        width: 0px;
+        height: 100%;
+        white-space: nowrap;
+    }
+
+        div.frame > .axis.x > img
+        {
+            height: 100%;
+        }
+
+
+    div.frame.y
+    {
+        height: 500px;
+    }
+
+    div.frame > .axis.y
+    {
+        width: 100%;
+        height: 0px;
+    }
+
+        div.frame > .axis.y > img
+        {
+            display: block;
+            width: 100%;
+        }
